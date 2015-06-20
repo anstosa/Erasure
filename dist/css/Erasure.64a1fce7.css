@@ -1,0 +1,131 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  background: url(/dist/img/background.png);
+  height: 100%; }
+
+body {
+  height: 100%;
+  font-family: Roboto, sans-serif;
+  line-height: 1.5;
+  padding-bottom: 100px; }
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.u-clearfix:before, .u-clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.u-clearfix:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.u-clearfix {
+  *zoom: 1; }
+
+.c-combo {
+  border: 1px solid #777;
+  border-radius: 2px;
+  height: 28px;
+  margin-right: 20px; }
+
+.c-field {
+  border: 1px solid #777;
+  border-radius: 2px;
+  line-height: 28px;
+  padding: 0 0 0 5px;
+  width: 40px; }
+  .c-field + label {
+    margin-right: 20px; }
+
+.c-button {
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+  background-color: #91BEFA;
+  border: 1px solid #0F6DD8;
+  border-radius: 2px;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px; }
+  .c-button.c-button--square {
+    padding: 0;
+    text-align: center;
+    width: 28px; }
+  .c-button:active, .c-button.is-selected {
+    background-color: rgba(0, 0, 0, 0.05);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.05), transparent);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05), transparent);
+    background-color: #2ED32A;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15) inset; }
+
+.c-dedication {
+  background: #91BEFA;
+  border-bottom: 1px solid #0037E5;
+  font-family: 'Indie Flower', cursive;
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+  width: 100%; }
+
+.c-controls {
+  background: #A3A3A3;
+  border-top: 1px solid #555555;
+  bottom: 0;
+  height: 100px;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 1; }
+
+.c-erasure {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Merriweather, serif;
+  font-size: 16px;
+  margin: 40px auto;
+  max-width: 650px;
+  width: 80%; }
+
+.c-erasure__paragraph__word {
+  display: inline-block;
+  margin-right: 3px;
+  position: relative; }
+  .c-erasure__paragraph__word.is-marked::before {
+    border-color: rgba(1, 1, 1, 0.9);
+    border-style: solid;
+    border-width: 12px 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    -moz-transform: scale(0.9) rotate(-3deg);
+    -ms-transform: scale(0.9) rotate(-3deg);
+    -o-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg); }
+  .c-erasure__paragraph__word.is-marked:hover::before {
+    opacity: 0.5; }
+
+[ng-click] {
+  cursor: pointer; }

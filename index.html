@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="erasure">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Erasure</title>
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://anstosa.github.io/Erasure">
+    <meta property="og:title" content="Erasure">
+    <meta property="og:image" content="http://anstosa.github.io/Erasure">
+    <meta property="og:description" content="">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather|Roboto|Indie+Flower">
+    <link rel="stylesheet" href="/dist/css/Erasure.min.c9ac6340.css">
+  </head>
+  <body ng-controller="ErasureCtrl" class="u-clearfix">
+    <div class="c-dedication">Dedicated to Lawrence Sutin. Inspiring artist, loving father, wise friend, and good dog.</div>
+    <div class="c-controls">
+      <select ng-model="bookIndex" class="c-combo">
+        <option ng-repeat="book in ::Books" value="{{$index}}">{{::book.title}}</option>
+      </select>
+      <input name="paragraphCount" type="number" ng-model="paragraphCount" ng-min="1" ng-required class="c-field">
+      <label for="paragraphCount">Paragraphs</label>
+      <button ng-click="updateSource()" class="c-button">Get New Passage</button>
+      <button ng-click="tool = &quot;pencil&quot;" ng-class="{&quot;is-selected&quot;: tool === &quot;pencil&quot;}" class="c-button c-button--square"><i class="fa fa-pencil"></i></button>
+      <button ng-click="tool = &quot;eraser&quot;" ng-class="{&quot;is-selected&quot;: tool === &quot;eraser&quot;}" class="c-button c-button--square"><i class="fa fa-eraser"></i></button>
+      <p>Click to use tools. Shift-click to use on range</p>
+    </div>
+    <article class="c-erasure">
+      <p ng-repeat="paragraph in source" ng-init="paragraphIndex = $index" class="c-erasure__paragraph"><span ng-repeat="word in ::paragraph track by $index" ng-init="wordIndex = $index" ng-click="action($event, paragraphIndex, wordIndex)" ng-class="{&quot;is-marked&quot;: marked[paragraphIndex][wordIndex]}" class="c-erasure__paragraph__word">{{word}}</span></p>
+    </article>
+    <script src="/dist/js/Erasure.min.2e30c801.js"></script>
+    <script>
+      //- Google Analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', '', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
