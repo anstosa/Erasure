@@ -21,7 +21,7 @@ html(lang='en', ng-app='erasure')
         meta(property='og:description',   content='#{DESCRIPTION}')
 
         link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Merriweather|Roboto|Indie+Flower')
-        // build:css(.) /Erasure/dist/css/Erasure.min.css
+        // build:css(.) dist/css/Erasure.min.css
         link(rel='stylesheet', href='bower_components/normalize.css/normalize.css')
         link(rel='stylesheet', href='bower_components/components-font-awesome/css/font-awesome.css')
         link(rel='stylesheet', href='dist/css/Erasure.css')
@@ -79,7 +79,7 @@ html(lang='en', ng-app='erasure')
                     ng-class='{"is-marked": marked[paragraphIndex][wordIndex]}'
                 ) {{word}}
 
-        // build:js(.) /Erasure/dist/js/Erasure.min.js
+        // build:js(.) dist/js/Erasure.min.js
         script(src='bower_components/jquery/Erasure/dist/jquery.js')
         script(src='bower_components/angular/angular.js')
         script(src='bower_components/angular-animate/angular-animate.js')

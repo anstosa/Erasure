@@ -5,7 +5,7 @@ $controls-height: 100px;
 * { @include box-sizing(border-box); }
 
 html {
-    background: url(/Erasure/dist/img/background.png);
+    background: url(../img/background.png);
     height: 100%;
 }
 

@@ -14,7 +14,7 @@
     <meta property="og:image" content="http://anstosa.github.io/Erasure">
     <meta property="og:description" content="">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather|Roboto|Indie+Flower">
-    <link rel="stylesheet" href="/Erasure/dist/css/Erasure.min.css">
+    <link rel="stylesheet" href="dist/css/Erasure.min.71d0dc2d.css">
   </head>
   <body ng-controller="ErasureCtrl" class="u-clearfix">
     <div class="c-dedication">Dedicated to Lawrence Sutin. Inspiring artist, loving father, wise friend, and good dog.</div>
@@ -32,7 +32,7 @@
     <article class="c-erasure">
       <p ng-repeat="paragraph in source" ng-init="paragraphIndex = $index" class="c-erasure__paragraph"><span ng-repeat="word in ::paragraph track by $index" ng-init="wordIndex = $index" ng-click="action($event, paragraphIndex, wordIndex)" ng-class="{&quot;is-marked&quot;: marked[paragraphIndex][wordIndex]}" class="c-erasure__paragraph__word">{{word}}</span></p>
     </article>
-    <script src="/Erasure/dist/js/Erasure.min.js"></script>
+    <script src="dist/js/Erasure.min.de7ce5ef.js"></script>
     <script>
       //- Google Analytics
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
