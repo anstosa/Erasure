@@ -21,10 +21,10 @@ html(lang='en', ng-app='erasure')
         meta(property='og:description',   content='#{DESCRIPTION}')
 
         link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Merriweather|Roboto|Indie+Flower')
-        // build:css(.) /dist/css/Erasure.min.css
-        link(rel='stylesheet', href='/bower_components/normalize.css/normalize.css')
-        link(rel='stylesheet', href='/bower_components/components-font-awesome/css/font-awesome.css')
-        link(rel='stylesheet', href='/dist/css/Erasure.css')
+        // build:css(.) /Erasure/dist/css/Erasure.min.css
+        link(rel='stylesheet', href='bower_components/normalize.css/normalize.css')
+        link(rel='stylesheet', href='bower_components/components-font-awesome/css/font-awesome.css')
+        link(rel='stylesheet', href='dist/css/Erasure.css')
         // endbuild
 
     body.u-clearfix(ng-controller='ErasureCtrl')
@@ -79,15 +79,15 @@ html(lang='en', ng-app='erasure')
                     ng-class='{"is-marked": marked[paragraphIndex][wordIndex]}'
                 ) {{word}}
 
-        // build:js(.) /dist/js/Erasure.min.js
-        script(src='/bower_components/jquery/dist/jquery.js')
-        script(src='/bower_components/angular/angular.js')
-        script(src='/bower_components/angular-animate/angular-animate.js')
-        script(src='/bower_components/underscore/underscore.js')
-        script(src='/bower_components/underscore.string/lib/underscore.string.js')
-        script(src='/src/Erasure.js')
-        script(src='/src/ErasureCtrl.js')
-        script(src='/books/Books.js')
+        // build:js(.) /Erasure/dist/js/Erasure.min.js
+        script(src='bower_components/jquery/Erasure/dist/jquery.js')
+        script(src='bower_components/angular/angular.js')
+        script(src='bower_components/angular-animate/angular-animate.js')
+        script(src='bower_components/underscore/underscore.js')
+        script(src='bower_components/underscore.string/lib/underscore.string.js')
+        script(src='src/Erasure.js')
+        script(src='src/ErasureCtrl.js')
+        script(src='books/Books.js')
         // endbuild
         script.
             //- Google Analytics
