@@ -18,7 +18,7 @@ function ErasureCtrl($http, $scope, Books) {
             console.warn('You lost changes');
             $scope.marked = {};
         }
-        $http.get('/books/' + $scope.book.path).then(function(response) {
+        $http.get('books/' + $scope.book.path).then(function(response) {
             var source = _.chain(response.data.split('\r\n\r\n'))
                 .each(function(paragraph, index, list) {
                     list[index] = _.clean(paragraph).split(/\r\n| /);
