@@ -1,5 +1,7 @@
 # Erasure
 
+> **Archive notice · Historical / unmaintained.** This extension is preserved as engineering history, not as actively supported software. This was an interactive birthday card for my father-in-law who is an Erasure artist
+
 An erasure book simulation using public domain works from [Project Gutenberg](https://www.gutenberg.org/).
 
 ## Installing global dependencies
